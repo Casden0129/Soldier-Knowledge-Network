@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An independent, unofficial directory that helps Soldiers find verified military resources and professional-development study materials.">
+  <title>Soldier Knowledge Network</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Soldier Knowledge Network home">
+        <span class="brand-mark" aria-hidden="true">SKN</span>
+        <span>
+          <strong>Soldier Knowledge Network</strong>
+          <small>Find it. Understand it. Use it.</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#resources">Resources</a>
+        <a href="#study-center">Study Center</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Independent Soldier resource project</p>
+          <h1>What are you trying to accomplish today?</h1>
+          <p class="hero-copy">
+            Search verified links to personnel, training, education, benefits,
+            publications, and professional-development resources.
+          </p>
+
+          <label class="search-box" for="resource-search">
+            <span class="sr-only">Search resources</span>
+            <input id="resource-search" type="search"
+              placeholder="Try “promotion,” “regulation,” “tuition,” or “training”"
+              autocomplete="off">
+            <span aria-hidden="true">⌕</span>
+          </label>
+
+          <div class="quick-actions" aria-label="Popular searches">
+            <button type="button" data-query="personnel">Personnel records</button>
+            <button type="button" data-query="publication">Army publications</button>
+            <button type="button" data-query="education">Education benefits</button>
+            <button type="button" data-query="training">Online training</button>
+          </div>
+        </div>
+
+        <aside class="status-panel" aria-label="Directory status">
+          <h2>Prototype status</h2>
+          <dl>
+            <div><dt id="resource-count">0</dt><dd>resources</dd></div>
+            <div><dt>6</dt><dd>categories</dd></div>
+            <div><dt>2026</dt><dd>initial release</dd></div>
+          </dl>
+          <p>Every listing shows its access requirements and last verification date.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="directory container" id="resources">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Resource directory</p>
+          <h2>Verified starting points</h2>
+        </div>
+        <p id="result-summary" aria-live="polite"></p>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter resources by category">
+        <button class="filter active" type="button" data-category="all">All</button>
+        <button class="filter" type="button" data-category="Personnel">Personnel</button>
+        <button class="filter" type="button" data-category="Training">Training</button>
+        <button class="filter" type="button" data-category="Education">Education</button>
+        <button class="filter" type="button" data-category="Publications">Publications</button>
+        <button class="filter" type="button" data-category="Benefits">Benefits</button>
+        <button class="filter" type="button" data-category="Finance">Finance</button>
+      </div>
+
+      <div id="resource-grid" class="resource-grid" aria-live="polite"></div>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <h3>No matching resources</h3>
+        <p>Try a broader term or select “All.”</p>
+      </div>
+    </section>
+
+    <section class="study-section" id="study-center">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Professional development</p>
+            <h2>Study Center</h2>
+          </div>
+          <span class="coming-soon">Coming in Phase 2</span>
+        </div>
+
+        <div class="study-grid">
+          <article>
+            <h3>Promotion Board Fundamentals</h3>
+            <p>Source-linked study topics, flashcards, and practice questions.</p>
+          </article>
+          <article>
+            <h3>Leadership & Counseling</h3>
+            <p>Guides organized around current doctrine and publication paragraphs.</p>
+          </article>
+          <article>
+            <h3>Army Programs</h3>
+            <p>Plain-language summaries with official references and review dates.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section container" id="about">
+      <div>
+        <p class="eyebrow">About the project</p>
+        <h2>Built to reduce the time Soldiers spend hunting for information.</h2>
+      </div>
+      <div>
+        <p>
+          Soldier Knowledge Network is designed as an independent directory and
+          learning resource. It does not replace official systems, authenticate users,
+          or store military personnel information.
+        </p>
+        <p>
+          Resource links should always lead users to the official source responsible
+          for the information or service.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Soldier Knowledge Network</strong>
+        <p>Independent and unofficial.</p>
+      </div>
+      <div class="disclaimer">
+        <strong>Disclaimer</strong>
+        <p>
+          The views and opinions presented here are those of the project contributors
+          and do not necessarily represent the views of the Department of Defense or
+          the Department of the Army. External hyperlinks do not constitute DoD or
+          Army endorsement.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

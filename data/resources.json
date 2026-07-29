@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Army Publishing Directorate",
+    "category": "Publications",
+    "description": "Find official Army regulations, pamphlets, forms, doctrinal publications, and administrative publications.",
+    "url": "https://armypubs.army.mil/",
+    "access": "Public",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "publication",
+      "regulation",
+      "forms",
+      "doctrine",
+      "ar",
+      "da pam",
+      "army pubs"
+    ]
+  },
+  {
+    "name": "Human Resources Command",
+    "category": "Personnel",
+    "description": "Career-management information covering assignments, promotions, evaluations, records, and other personnel services.",
+    "url": "https://www.hrc.army.mil/",
+    "access": "Mixed access",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "hrc",
+      "promotion",
+      "assignment",
+      "evaluation",
+      "records",
+      "career"
+    ]
+  },
+  {
+    "name": "IPPS-A",
+    "category": "Personnel",
+    "description": "Official information, training, updates, and access guidance for the Army's integrated human-resources system.",
+    "url": "https://ipps-a.army.mil/",
+    "access": "Mixed access",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "ipps-a",
+      "personnel",
+      "absence",
+      "par",
+      "orders",
+      "talent",
+      "hr"
+    ]
+  },
+  {
+    "name": "ATIS Learning",
+    "category": "Training",
+    "description": "Access the Army Training Information System learning environment for distributed learning and online courses.",
+    "url": "https://learn.atis.army.mil/",
+    "access": "Authentication",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "atis",
+      "training",
+      "courses",
+      "online",
+      "learning",
+      "lms"
+    ]
+  },
+  {
+    "name": "Army Training Network",
+    "category": "Training",
+    "description": "Training-management resources, doctrine-supported tools, and leader references for planning and executing training.",
+    "url": "https://atn.army.mil/",
+    "access": "CAC may be required",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "atn",
+      "training",
+      "unit",
+      "leader",
+      "management",
+      "readiness"
+    ]
+  },
+  {
+    "name": "ArmyIgnitED",
+    "category": "Education",
+    "description": "Request tuition assistance and credentialing assistance and manage Army education goals.",
+    "url": "https://armyignited.cce.af.mil/student/public/welcome",
+    "access": "CAC required",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "education",
+      "tuition",
+      "college",
+      "credential",
+      "armyignited",
+      "ta",
+      "ca"
+    ]
+  },
+  {
+    "name": "Army COOL",
+    "category": "Education",
+    "description": "Explore civilian credentials connected to Army occupations and professional-development goals.",
+    "url": "https://www.cool.osd.mil/army/index.html",
+    "access": "Public",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "cool",
+      "credential",
+      "certification",
+      "mos",
+      "education",
+      "career"
+    ]
+  },
+  {
+    "name": "MyArmyBenefits",
+    "category": "Benefits",
+    "description": "Official Army benefits information, eligibility fact sheets, calculators, and life-event planning resources.",
+    "url": "https://myarmybenefits.us.army.mil/",
+    "access": "Mixed access",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "benefits",
+      "retirement",
+      "survivor",
+      "insurance",
+      "calculator",
+      "family"
+    ]
+  },
+  {
+    "name": "DFAS myPay",
+    "category": "Finance",
+    "description": "Access military pay statements, tax documents, allotments, direct-deposit settings, and related pay services.",
+    "url": "https://mypay.dfas.mil/",
+    "access": "Authentication",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "pay",
+      "les",
+      "dfas",
+      "tax",
+      "allotment",
+      "finance",
+      "mypay"
+    ]
+  },
+  {
+    "name": "Thrift Savings Plan",
+    "category": "Finance",
+    "description": "Manage federal retirement savings and review official TSP investment and planning information.",
+    "url": "https://www.tsp.gov/",
+    "access": "Mixed access",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "tsp",
+      "retirement",
+      "savings",
+      "investment",
+      "brs",
+      "finance"
+    ]
+  },
+  {
+    "name": "milConnect",
+    "category": "Benefits",
+    "description": "Manage selected benefits and personnel-related services, including correspondence and family information.",
+    "url": "https://milconnect.dmdc.osd.mil/milconnect/",
+    "access": "Authentication",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "milconnect",
+      "deers",
+      "benefits",
+      "family",
+      "records",
+      "dmdc"
+    ]
+  },
+  {
+    "name": "MEDPROS",
+    "category": "Personnel",
+    "description": "Access medical readiness information through the official Army medical protection system.",
+    "url": "https://medpros.mods.army.mil/portal/",
+    "access": "CAC required",
+    "lastVerified": "July 29, 2026",
+    "keywords": [
+      "medical",
+      "readiness",
+      "medpros",
+      "immunization",
+      "dental",
+      "profile"
+    ]
+  }
+]
