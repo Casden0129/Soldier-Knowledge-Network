@@ -1,90 +1,77 @@
-# Soldier Knowledge Network — Starter Site
+# Soldier Knowledge Network
 
-A static prototype for an independent, unofficial Soldier resource directory.
+Soldier Knowledge Network (SKN) is an independent, unofficial resource directory and professional-development platform for the Army workforce and community.
 
-## What is included
+## Mission
 
-- Responsive homepage
-- Search and category filtering
-- Resource cards loaded from `data/resources.json`
-- Access labels and last-verified dates
-- Study Center placeholders
-- Army/DoD non-endorsement disclaimer
-- No login, database, analytics, cookies, or sensitive-data collection
+**Make trusted Army information easier to find, understand, and use.**
 
-## Recommended repository name
+## Current release
 
-`soldier-knowledge-network`
+- Version: `0.2.0`
+- Stage: Public Alpha
+- Hosting: Cloudflare Pages
+- Architecture: Static HTML, CSS, JavaScript, and JSON
+- Accounts/database: None
 
-## Upload to GitHub using the website
+## Core capabilities
 
-1. Create a new GitHub repository.
-2. Name it `soldier-knowledge-network`.
-3. Choose **Public** if you want transparent community contributions, or **Private** while developing.
-4. Add a short description.
-5. Do not initialize it with another README if you plan to upload every file in this package.
-6. Open the repository and choose **Add file → Upload files**.
-7. Upload the contents of this folder, including the `data` folder.
-8. Commit the files to the `main` branch.
+- Task-based search with Army acronyms, common terms, and legacy system names
+- Audience filters for Soldiers, Guard, Reserve, Civilians, contractors, families, retirees, and veterans
+- Frequently used resources
+- Browser-based favorites with no account
+- Clear source, owner, access, network, domain, status, and verification information
+- Structured broken-link, correction, and resource-request forms
+- Automated JSON validation and scheduled public-link checks
+- Public update log and project governance standards
 
-Important: upload the files themselves at the repository root. Do not upload the outer
-`soldier-knowledge-network-starter` folder as an extra level.
+## Repository structure
 
-## Connect the repository to Cloudflare Pages
-
-1. Open Cloudflare.
-2. Go to **Workers & Pages**.
-3. Choose **Create application → Pages → Connect to Git**.
-4. Authorize GitHub and grant access only to this repository.
-5. Select `soldier-knowledge-network`.
-6. Use these settings:
-
-   - Production branch: `main`
-   - Framework preset: `None`
-   - Build command: leave blank, or use `exit 0`
-   - Build output directory: `.`
-
-7. Choose **Save and Deploy**.
-8. Cloudflare will assign a URL similar to:
-   `soldier-knowledge-network.pages.dev`
-
-Every future commit to `main` will trigger a new deployment.
-
-## Add or edit resources
-
-Open `data/resources.json`. Each listing uses this format:
-
-```json
-{
-  "name": "Resource name",
-  "category": "Personnel",
-  "description": "Plain-language purpose.",
-  "url": "https://official-source.example/",
-  "access": "CAC required",
-  "lastVerified": "Month DD, YYYY",
-  "keywords": ["search", "terms"]
-}
+```text
+.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+├── assets/icons/
+├── data/
+│   ├── resources.json
+│   ├── site.json
+│   └── updates.json
+├── docs/
+├── pages/
+├── scripts/
+├── 404.html
+├── index.html
+├── script.js
+└── styles.css
 ```
 
-Keep the JSON valid:
-- Separate entries with commas.
-- Use double quotation marks.
-- Do not place a comma after the final entry.
+## Run locally
 
-## Before sharing Army-wide
+A local web server is required because the site loads JSON with `fetch()`.
 
-- Do not use official Army logos, seals, rank insignia, unit crests, or other protected marks.
-- Keep the independent/unofficial disclaimer visible.
-- Link to official sources instead of copying controlled or frequently changing content.
-- Do not collect CAC data, DoD IDs, personnel records, medical data, CUI, or operational information.
-- Establish a documented verification and correction process.
-- Complete a name/domain/trademark review before treating the working title as permanent.
+```bash
+python -m http.server 8000
+```
 
-## Suggested next files
+Then open `http://localhost:8000`.
 
-- `CONTRIBUTING.md` — contributor and source-verification standards
-- `SECURITY.md` — reporting security issues
-- `PRIVACY.md` — plain-language privacy statement
-- `404.html` — custom error page
-- `.github/ISSUE_TEMPLATE/broken-link.yml` — structured broken-link reporting
-- Automated weekly link checking through GitHub Actions
+## Add or edit a resource
+
+Edit `data/resources.json`. Every entry must pass `scripts/validate_data.py`.
+
+```bash
+python scripts/validate_data.py
+```
+
+Required fields include a unique ID, official owner, source type, audiences, access conditions, network requirement, status, verification date, tasks, keywords, and HTTPS URL.
+
+## Contributing and reporting
+
+- Read [CONTRIBUTING.md](CONTRIBUTING.md).
+- Report a public navigation problem through the issue templates.
+- Do not submit credentials, PII, CUI, medical records, orders, rosters, internal screenshots, or operational information.
+
+## Disclaimer
+
+SKN is not an official Department of Defense or Department of the Army website. It does not replace official policy, systems of record, authorized support channels, or professional advice. External hyperlinks are provided for navigation and do not constitute endorsement.

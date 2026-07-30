@@ -3,26 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An independent, unofficial directory that helps Soldiers find verified military resources and professional-development study materials.">
+  <meta name="description" content="An independent, unofficial directory that helps the Army workforce and community find trusted resources and professional-development information.">
+  <meta name="theme-color" content="#26392c">
   <title>Soldier Knowledge Network</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
+  <div class="alpha-banner"><div class="container"><strong>Public Alpha</strong><span>Independent and unofficial. Verify policy decisions through the responsible official source.</span></div></div>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="Soldier Knowledge Network home">
+      <a class="brand" href="index.html" aria-label="Soldier Knowledge Network home">
         <span class="brand-mark" aria-hidden="true">SKN</span>
-        <span>
-          <strong>Soldier Knowledge Network</strong>
-          <small>Find it. Understand it. Use it.</small>
-        </span>
+        <span><strong>Soldier Knowledge Network</strong><small>Find it. Understand it. Use it.</small></span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="#resources">Resources</a>
-        <a href="#study-center">Study Center</a>
-        <a href="#about">About</a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" aria-label="Primary navigation">
+        <a href="#resources">Resources</a><a href="#updates">Updates</a><a href="#study-center">Study Center</a><a href="pages/about.html">About</a>
       </nav>
     </div>
   </header>
@@ -31,132 +30,93 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">Independent Soldier resource project</p>
+          <p class="eyebrow">The independent starting point for the Army workforce and community</p>
           <h1>What are you trying to accomplish today?</h1>
-          <p class="hero-copy">
-            Search verified links to personnel, training, education, benefits,
-            publications, and professional-development resources.
-          </p>
-
+          <p class="hero-copy">Search trusted links for personnel, training, education, benefits, publications, travel, IT support, family programs, and professional development.</p>
           <label class="search-box" for="resource-search">
             <span class="sr-only">Search resources</span>
-            <input id="resource-search" type="search"
-              placeholder="Try “promotion,” “regulation,” “tuition,” or “training”"
-              autocomplete="off">
+            <input id="resource-search" type="search" placeholder="Try “promotion points,” “leave,” “Army email,” “college,” or “ALMS”" autocomplete="off">
             <span aria-hidden="true">⌕</span>
           </label>
-
-          <div class="quick-actions" aria-label="Popular searches">
-            <button type="button" data-query="personnel">Personnel records</button>
-            <button type="button" data-query="publication">Army publications</button>
-            <button type="button" data-query="education">Education benefits</button>
-            <button type="button" data-query="training">Online training</button>
+          <div class="quick-actions" aria-label="Popular tasks">
+            <button type="button" data-query="personnel records">Check my records</button>
+            <button type="button" data-query="army email">Access Army email</button>
+            <button type="button" data-query="regulation form">Find a regulation or form</button>
+            <button type="button" data-query="online training">Complete online training</button>
+            <button type="button" data-query="tuition assistance">Use education benefits</button>
           </div>
         </div>
-
         <aside class="status-panel" aria-label="Directory status">
-          <h2>Prototype status</h2>
+          <div class="status-heading"><span class="status-dot" aria-hidden="true"></span><strong id="release-stage">Public Alpha</strong></div>
           <dl>
-            <div><dt id="resource-count">0</dt><dd>resources</dd></div>
-            <div><dt>6</dt><dd>categories</dd></div>
-            <div><dt>2026</dt><dd>initial release</dd></div>
+            <div><dt id="resource-count">—</dt><dd>resources</dd></div>
+            <div><dt id="category-count">—</dt><dd>categories</dd></div>
+            <div><dt id="site-version">—</dt><dd>version</dd></div>
           </dl>
-          <p>Every listing shows its access requirements and last verification date.</p>
+          <p>Resource cards show their owner, destination domain, access conditions, source classification, and manual review date.</p>
+          <span class="updated-line">Updated <time id="site-updated">—</time></span>
         </aside>
       </div>
     </section>
 
-    <section class="directory container" id="resources">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Resource directory</p>
-          <h2>Verified starting points</h2>
+    <section class="audience-strip" aria-labelledby="audience-heading">
+      <div class="container audience-inner">
+        <div><p class="eyebrow" id="audience-heading">Tailor the directory</p><h2>Show resources for</h2></div>
+        <div class="audience-filters" role="group" aria-label="Filter resources by audience">
+          <button class="audience active" type="button" data-audience="everyone">Everyone</button>
+          <button class="audience" type="button" data-audience="active-army">Active Army</button>
+          <button class="audience" type="button" data-audience="army-national-guard">National Guard</button>
+          <button class="audience" type="button" data-audience="army-reserve">Army Reserve</button>
+          <button class="audience" type="button" data-audience="army-civilian">Army Civilian</button>
+          <button class="audience" type="button" data-audience="contractor">Contractor</button>
+          <button class="audience" type="button" data-audience="family-member">Family Member</button>
+          <button class="audience" type="button" data-audience="retiree-veteran">Retiree/Veteran</button>
         </div>
-        <p id="result-summary" aria-live="polite"></p>
       </div>
+    </section>
 
-      <div class="filter-row" role="group" aria-label="Filter resources by category">
-        <button class="filter active" type="button" data-category="all">All</button>
-        <button class="filter" type="button" data-category="Personnel">Personnel</button>
-        <button class="filter" type="button" data-category="Training">Training</button>
-        <button class="filter" type="button" data-category="Education">Education</button>
-        <button class="filter" type="button" data-category="Publications">Publications</button>
-        <button class="filter" type="button" data-category="Benefits">Benefits</button>
-        <button class="filter" type="button" data-category="Finance">Finance</button>
+    <section class="favorites-section container" id="favorites" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Saved on this device</p><h2>My Favorites</h2></div><button class="text-button" id="clear-favorites" type="button">Clear favorites</button></div>
+      <div id="favorites-grid" class="resource-grid compact-grid"></div>
+    </section>
+
+    <section class="featured-section container" aria-labelledby="featured-heading">
+      <div class="section-heading"><div><p class="eyebrow">Fast access</p><h2 id="featured-heading">Frequently Used Resources</h2></div><p>Saved and filtered locally—no account required.</p></div>
+      <div id="featured-grid" class="resource-grid compact-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="directory container" id="resources">
+      <div class="section-heading"><div><p class="eyebrow">Reviewed starting points</p><h2>Complete Resource Directory</h2></div><p id="result-summary" aria-live="polite"></p></div>
+      <div class="directory-tools">
+        <div id="category-filters" class="filter-row" role="group" aria-label="Filter resources by category"></div>
+        <select id="sort-select" aria-label="Sort resources"><option value="relevance">Sort: Relevance</option><option value="name">Sort: Name</option><option value="verified">Sort: Recently verified</option></select>
       </div>
-
       <div id="resource-grid" class="resource-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden><h3>No matching resources</h3><p>Try a broader phrase, switch the audience to Everyone, or clear the category filter.</p><button id="clear-search" type="button">Clear filters</button></div>
+      <div class="directory-actions"><a class="button secondary" href="https://github.com/Casden0129/Soldier-Knowledge-Network/issues/new?template=resource-request.yml" target="_blank" rel="noopener noreferrer">Suggest a Resource</a><a class="text-link" href="pages/disclaimer.html">How SKN classifies and verifies links</a></div>
+    </section>
 
-      <div id="empty-state" class="empty-state" hidden>
-        <h3>No matching resources</h3>
-        <p>Try a broader term or select “All.”</p>
-      </div>
+    <section class="updates-section" id="updates">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">Current changes</p><h2>SKN Updates</h2></div><a class="text-link light" href="pages/updates.html">View all updates</a></div><div id="updates-grid" class="updates-grid"></div></div>
     </section>
 
     <section class="study-section" id="study-center">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Professional development</p>
-            <h2>Study Center</h2>
-          </div>
-          <span class="coming-soon">Coming in Phase 2</span>
-        </div>
-
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">Professional development</p><h2>Study Center</h2></div><span class="coming-soon">Phase 2</span></div>
         <div class="study-grid">
-          <article>
-            <h3>Promotion Board Fundamentals</h3>
-            <p>Source-linked study topics, flashcards, and practice questions.</p>
-          </article>
-          <article>
-            <h3>Leadership & Counseling</h3>
-            <p>Guides organized around current doctrine and publication paragraphs.</p>
-          </article>
-          <article>
-            <h3>Army Programs</h3>
-            <p>Plain-language summaries with official references and review dates.</p>
-          </article>
+          <article><span>01</span><h3>Promotion Board Fundamentals</h3><p>Source-linked topics, flashcards, practice questions, and a guided study plan.</p></article>
+          <article><span>02</span><h3>Leadership & Counseling</h3><p>Plain-language guides tied to current doctrine and exact publication references.</p></article>
+          <article><span>03</span><h3>Army Programs</h3><p>Reviewed summaries with official sources, revision dates, and superseded-status alerts.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="about-section container" id="about">
-      <div>
-        <p class="eyebrow">About the project</p>
-        <h2>Built to reduce the time Soldiers spend hunting for information.</h2>
-      </div>
-      <div>
-        <p>
-          Soldier Knowledge Network is designed as an independent directory and
-          learning resource. It does not replace official systems, authenticate users,
-          or store military personnel information.
-        </p>
-        <p>
-          Resource links should always lead users to the official source responsible
-          for the information or service.
-        </p>
-      </div>
+    <section class="principles-section container">
+      <div><p class="eyebrow">The SKN standard</p><h2>Fast, verified, understandable, accessible, and trustworthy.</h2></div>
+      <div class="principles-grid"><article><strong>Task focused</strong><p>Search by what you need to accomplish, not only by an acronym.</p></article><article><strong>Source clear</strong><p>See the owner and destination domain before opening a link.</p></article><article><strong>Privacy conscious</strong><p>No account is required and favorites stay in your browser.</p></article><article><strong>Continuously reviewed</strong><p>Automated checks flag public-link problems for human review.</p></article></div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <strong>Soldier Knowledge Network</strong>
-        <p>Independent and unofficial.</p>
-      </div>
-      <div class="disclaimer">
-        <strong>Disclaimer</strong>
-        <p>
-          The views and opinions presented here are those of the project contributors
-          and do not necessarily represent the views of the Department of Defense or
-          the Department of the Army. External hyperlinks do not constitute DoD or
-          Army endorsement.
-        </p>
-      </div>
-    </div>
-  </footer>
-
+  <footer><div class="container footer-grid"><div><div class="brand footer-brand"><span class="brand-mark" aria-hidden="true">SKN</span><span><strong>Soldier Knowledge Network</strong><small>Independent and unofficial.</small></span></div></div><div class="footer-links"><a href="pages/about.html">About</a><a href="pages/privacy.html">Privacy</a><a href="pages/disclaimer.html">Disclaimer</a><a href="pages/updates.html">Updates</a><a href="https://github.com/Casden0129/Soldier-Knowledge-Network" target="_blank" rel="noopener noreferrer">GitHub</a></div><div class="disclaimer"><strong>Important</strong><p>SKN is not an official Department of Defense or Department of the Army website. External links are provided for navigation and do not constitute endorsement. Never submit credentials, PII, CUI, medical records, orders, rosters, or operational information to SKN or its public repository.</p></div></div></footer>
   <script src="script.js" defer></script>
 </body>
 </html>

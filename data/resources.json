@@ -1,198 +1,1438 @@
 [
   {
+    "id": "army-pubs",
     "name": "Army Publishing Directorate",
-    "category": "Publications",
-    "description": "Find official Army regulations, pamphlets, forms, doctrinal publications, and administrative publications.",
+    "fullName": "Army Publishing Directorate",
+    "category": "Publications & Policy",
+    "description": "Find current Army regulations, pamphlets, forms, doctrinal publications, and administrative publications.",
+    "tasks": [
+      "Find an Army regulation or pamphlet",
+      "Download an official Army form",
+      "Check whether a publication was superseded"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
     "url": "https://armypubs.army.mil/",
-    "access": "Public",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "armypubs.army.mil",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "publication",
+      "army pubs",
       "regulation",
-      "forms",
-      "doctrine",
       "ar",
       "da pam",
-      "army pubs"
-    ]
+      "form",
+      "doctrine",
+      "publication",
+      "alaract"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
   },
   {
-    "name": "Human Resources Command",
-    "category": "Personnel",
-    "description": "Career-management information covering assignments, promotions, evaluations, records, and other personnel services.",
+    "id": "hrc",
+    "name": "HRC",
+    "fullName": "U.S. Army Human Resources Command",
+    "category": "Personnel & Career",
+    "description": "Career-management information for assignments, promotions, evaluations, records, and personnel services.",
+    "tasks": [
+      "Review promotion information",
+      "Find assignment guidance",
+      "Access personnel-record services"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "U.S. Army Human Resources Command",
     "url": "https://www.hrc.army.mil/",
-    "access": "Mixed access",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "www.hrc.army.mil",
+    "access": [
+      "Public content",
+      "CAC for some services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "hrc",
+      "human resources command",
       "promotion",
       "assignment",
       "evaluation",
       "records",
-      "career"
-    ]
+      "career",
+      "iPERMS"
+    ],
+    "legacyNames": [
+      "Army HRC"
+    ],
+    "automatedLinkCheck": true
   },
   {
+    "id": "ipps-a",
     "name": "IPPS-A",
-    "category": "Personnel",
-    "description": "Official information, training, updates, and access guidance for the Army's integrated human-resources system.",
+    "fullName": "Integrated Personnel and Pay System–Army",
+    "category": "Personnel & Career",
+    "description": "Access information and entry points for Army personnel and pay transactions.",
+    "tasks": [
+      "Submit a personnel action request",
+      "Request an absence",
+      "Review personnel information and orders"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
     "url": "https://ipps-a.army.mil/",
-    "access": "Mixed access",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "ipps-a.army.mil",
+    "access": [
+      "Public information",
+      "CAC required for self-service"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "ipps-a",
       "personnel",
-      "absence",
       "par",
+      "absence",
+      "leave",
       "orders",
-      "talent",
-      "hr"
-    ]
+      "talent profile",
+      "stp",
+      "hr",
+      "pay"
+    ],
+    "legacyNames": [
+      "eMILPO",
+      "ERB",
+      "ORB",
+      "SRB"
+    ],
+    "automatedLinkCheck": true
   },
   {
+    "id": "army-365-email",
+    "name": "Army 365 Email",
+    "fullName": "Army 365 Outlook Web Access",
+    "category": "IT & Communications",
+    "description": "Open DoD Microsoft 365 Outlook webmail for authorized users.",
+    "tasks": [
+      "Read Army email",
+      "Open Outlook on the web",
+      "Access my government mailbox"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
+    "url": "https://webmail.apps.mil/",
+    "displayDomain": "webmail.apps.mil",
+    "access": [
+      "CAC required",
+      "Authorized account required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
+    "keywords": [
+      "email",
+      "webmail",
+      "outlook",
+      "army 365",
+      "office 365",
+      "a365",
+      "mail"
+    ],
+    "legacyNames": [
+      "AKO email",
+      "DEE"
+    ],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "atis-learning",
     "name": "ATIS Learning",
-    "category": "Training",
-    "description": "Access the Army Training Information System learning environment for distributed learning and online courses.",
+    "fullName": "Army Training Information System Learning",
+    "category": "Training & Readiness",
+    "description": "Complete Army distributed-learning courses and access assigned online training.",
+    "tasks": [
+      "Complete online Army training",
+      "Find assigned courses",
+      "Review learning activity"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
     "url": "https://learn.atis.army.mil/",
-    "access": "Authentication",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "learn.atis.army.mil",
+    "access": [
+      "Authentication required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
       "atis",
       "training",
       "courses",
-      "online",
-      "learning",
-      "lms"
-    ]
+      "online learning",
+      "lms",
+      "distributed learning"
+    ],
+    "legacyNames": [
+      "ALMS"
+    ],
+    "automatedLinkCheck": true
   },
   {
-    "name": "Army Training Network",
-    "category": "Training",
-    "description": "Training-management resources, doctrine-supported tools, and leader references for planning and executing training.",
+    "id": "atrrs",
+    "name": "ATRRS",
+    "fullName": "Army Training Requirements and Resources System",
+    "category": "Training & Readiness",
+    "description": "Access Army training requirements, course information, and authorized enrollment functions.",
+    "tasks": [
+      "Search for an Army course",
+      "Review training reservations",
+      "Access self-development course information"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://www.atrrs.army.mil/",
+    "displayDomain": "www.atrrs.army.mil",
+    "access": [
+      "CAC may be required"
+    ],
+    "network": "Army network or approved access may be required",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "atrrs",
+      "course",
+      "school",
+      "reservation",
+      "training transcript",
+      "self development"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "army-training-network",
+    "name": "ATN",
+    "fullName": "Army Training Network",
+    "category": "Training & Readiness",
+    "description": "Leader tools and doctrine-supported resources for planning, preparing, executing, and assessing training.",
+    "tasks": [
+      "Plan unit training",
+      "Find training-management tools",
+      "Access leader training references"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
     "url": "https://atn.army.mil/",
-    "access": "CAC may be required",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "atn.army.mil",
+    "access": [
+      "CAC may be required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "atn",
+      "training management",
+      "unit training",
+      "readiness",
+      "leader tools",
+      "METL",
+      "T&EO"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "jko",
+    "name": "JKO",
+    "fullName": "Joint Knowledge Online",
+    "category": "Training & Readiness",
+    "description": "Joint and DoD online training, course catalogs, and distributed-learning resources.",
+    "tasks": [
+      "Complete joint online training",
+      "Search the JKO course catalog",
+      "Access required DoD training"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
+    "url": "https://jkodirect.jten.mil/",
+    "displayDomain": "jkodirect.jten.mil",
+    "access": [
+      "CAC or authorized login required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "joint knowledge online",
       "training",
-      "unit",
-      "leader",
-      "management",
-      "readiness"
-    ]
+      "courses",
+      "correspondence",
+      "joint"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
   },
   {
+    "id": "armyignited",
     "name": "ArmyIgnitED",
-    "category": "Education",
-    "description": "Request tuition assistance and credentialing assistance and manage Army education goals.",
-    "url": "https://armyignited.cce.af.mil/student/public/welcome",
-    "access": "CAC required",
-    "lastVerified": "July 29, 2026",
+    "fullName": "ArmyIgnitED Education Portal",
+    "category": "Education & Credentials",
+    "description": "Manage Army Tuition Assistance, Credentialing Assistance, and supported education requests.",
+    "tasks": [
+      "Request tuition assistance",
+      "Request credentialing assistance",
+      "Manage an education goal"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://www.armyignited.army.mil/student/public/welcome",
+    "displayDomain": "www.armyignited.army.mil",
+    "access": [
+      "CAC required for account services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "education",
-      "tuition",
       "college",
-      "credential",
-      "armyignited",
+      "tuition assistance",
       "ta",
-      "ca"
-    ]
+      "credentialing assistance",
+      "ca",
+      "education",
+      "degree",
+      "certification"
+    ],
+    "legacyNames": [
+      "GoArmyEd"
+    ],
+    "automatedLinkCheck": true
   },
   {
+    "id": "army-cool",
     "name": "Army COOL",
-    "category": "Education",
-    "description": "Explore civilian credentials connected to Army occupations and professional-development goals.",
+    "fullName": "Army Credentialing Opportunities On-Line",
+    "category": "Education & Credentials",
+    "description": "Explore civilian credentials related to Army occupations, duties, and professional-development goals.",
+    "tasks": [
+      "Find credentials related to an MOS",
+      "Research certification requirements",
+      "Plan credentialing assistance"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
     "url": "https://www.cool.osd.mil/army/index.html",
-    "access": "Public",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "www.cool.osd.mil",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
       "cool",
       "credential",
       "certification",
       "mos",
-      "education",
-      "career"
-    ]
+      "career",
+      "license",
+      "credentialing"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
   },
   {
+    "id": "army-career-tracker",
+    "name": "ACT",
+    "fullName": "Army Career Tracker",
+    "category": "Personnel & Career",
+    "description": "Create professional-development goals and review career, training, education, and assignment information.",
+    "tasks": [
+      "Create an individual development plan",
+      "Review career-development information",
+      "Track professional goals"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://actnow.army.mil/",
+    "displayDomain": "actnow.army.mil",
+    "access": [
+      "CAC required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "career tracker",
+      "idp",
+      "individual development plan",
+      "career map",
+      "professional development"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "mypay",
+    "name": "myPay",
+    "fullName": "DFAS myPay",
+    "category": "Pay & Benefits",
+    "description": "View pay statements and tax documents and manage selected military or civilian pay settings.",
+    "tasks": [
+      "View my LES",
+      "Download a W-2",
+      "Update allotments or direct deposit"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Finance and Accounting Service",
+    "url": "https://mypay.dfas.mil/",
+    "displayDomain": "mypay.dfas.mil",
+    "access": [
+      "Login required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
+    "keywords": [
+      "pay",
+      "les",
+      "w2",
+      "tax",
+      "allotment",
+      "direct deposit",
+      "dfas",
+      "finance"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "tsp",
+    "name": "TSP",
+    "fullName": "Thrift Savings Plan",
+    "category": "Pay & Benefits",
+    "description": "Manage federal retirement savings and review official investment and planning information.",
+    "tasks": [
+      "Review my TSP balance",
+      "Change investments",
+      "Plan federal retirement savings"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-federal",
+    "officialOwner": "Federal Retirement Thrift Investment Board",
+    "url": "https://www.tsp.gov/",
+    "displayDomain": "www.tsp.gov",
+    "access": [
+      "Public information",
+      "Login required for account services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "retirement",
+      "savings",
+      "investment",
+      "brs",
+      "traditional",
+      "roth",
+      "funds"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "myarmybenefits",
     "name": "MyArmyBenefits",
-    "category": "Benefits",
-    "description": "Official Army benefits information, eligibility fact sheets, calculators, and life-event planning resources.",
+    "fullName": "The Official Army Benefits Website",
+    "category": "Pay & Benefits",
+    "description": "Research Army and federal benefits through official fact sheets, calculators, and life-event resources.",
+    "tasks": [
+      "Research a military benefit",
+      "Use a benefits calculator",
+      "Plan for a life event or retirement"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
     "url": "https://myarmybenefits.us.army.mil/",
-    "access": "Mixed access",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "myarmybenefits.us.army.mil",
+    "access": [
+      "Public",
+      "Authentication for some tools"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
       "benefits",
       "retirement",
       "survivor",
       "insurance",
       "calculator",
-      "family"
-    ]
+      "family",
+      "state benefits"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
   },
   {
-    "name": "DFAS myPay",
-    "category": "Finance",
-    "description": "Access military pay statements, tax documents, allotments, direct-deposit settings, and related pay services.",
-    "url": "https://mypay.dfas.mil/",
-    "access": "Authentication",
-    "lastVerified": "July 29, 2026",
-    "keywords": [
-      "pay",
-      "les",
-      "dfas",
-      "tax",
-      "allotment",
-      "finance",
-      "mypay"
-    ]
-  },
-  {
-    "name": "Thrift Savings Plan",
-    "category": "Finance",
-    "description": "Manage federal retirement savings and review official TSP investment and planning information.",
-    "url": "https://www.tsp.gov/",
-    "access": "Mixed access",
-    "lastVerified": "July 29, 2026",
-    "keywords": [
-      "tsp",
-      "retirement",
-      "savings",
-      "investment",
-      "brs",
-      "finance"
-    ]
-  },
-  {
+    "id": "milconnect",
     "name": "milConnect",
-    "category": "Benefits",
+    "fullName": "Defense Manpower Data Center milConnect",
+    "category": "Pay & Benefits",
     "description": "Manage selected benefits and personnel-related services, including correspondence and family information.",
+    "tasks": [
+      "Review DEERS-related information",
+      "Manage benefits correspondence",
+      "Access authorized personnel services"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Manpower Data Center",
     "url": "https://milconnect.dmdc.osd.mil/milconnect/",
-    "access": "Authentication",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "milconnect.dmdc.osd.mil",
+    "access": [
+      "DS Logon or CAC may be required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "milconnect",
       "deers",
       "benefits",
       "family",
       "records",
-      "dmdc"
-    ]
+      "dmdc",
+      "tricare",
+      "correspondence"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
   },
   {
+    "id": "medpros",
     "name": "MEDPROS",
-    "category": "Personnel",
-    "description": "Access medical readiness information through the official Army medical protection system.",
+    "fullName": "Medical Protection System",
+    "category": "Medical & Wellness",
+    "description": "Access Army medical-readiness information for authorized users.",
+    "tasks": [
+      "Check medical readiness",
+      "Review immunization status",
+      "Review dental or deployment health requirements"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
     "url": "https://medpros.mods.army.mil/portal/",
-    "access": "CAC required",
-    "lastVerified": "July 29, 2026",
+    "displayDomain": "medpros.mods.army.mil",
+    "access": [
+      "CAC required"
+    ],
+    "network": "Army network, VPN, or approved access may be required",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
     "keywords": [
-      "medical",
-      "readiness",
-      "medpros",
+      "medical readiness",
       "immunization",
       "dental",
-      "profile"
-    ]
+      "pha",
+      "profile",
+      "mods"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "mhs-genesis",
+    "name": "MHS GENESIS",
+    "fullName": "MHS GENESIS Patient Portal",
+    "category": "Medical & Wellness",
+    "description": "Access appointments, secure messages, health records, and other supported military health services.",
+    "tasks": [
+      "View a medical appointment",
+      "Message a military health-care team",
+      "Review available health records"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Health Agency",
+    "url": "https://my.mhsgenesis.health.mil/",
+    "displayDomain": "my.mhsgenesis.health.mil",
+    "access": [
+      "DS Logon or approved authentication required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
+    "keywords": [
+      "health records",
+      "appointment",
+      "patient portal",
+      "dha",
+      "tricare",
+      "medical"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "dts",
+    "name": "DTS",
+    "fullName": "Defense Travel System",
+    "category": "Travel & PCS",
+    "description": "Create and manage official travel authorizations, reservations, vouchers, and local vouchers.",
+    "tasks": [
+      "Create a travel authorization",
+      "Submit a travel voucher",
+      "Review official travel reservations"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Travel Management Office",
+    "url": "https://dtsproweb.defensetravel.osd.mil/dts-app/pubsite/all/view/",
+    "displayDomain": "dtsproweb.defensetravel.osd.mil",
+    "access": [
+      "CAC required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
+    "keywords": [
+      "travel",
+      "voucher",
+      "authorization",
+      "tdy",
+      "per diem",
+      "reservation",
+      "defense travel system"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "dtmo",
+    "name": "DTMO",
+    "fullName": "Defense Travel Management Office",
+    "category": "Travel & PCS",
+    "description": "Official travel policy, rates, training, and support resources for DoD travelers.",
+    "tasks": [
+      "Find per diem rates",
+      "Review official travel policy",
+      "Locate DTS training or support"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Travel Management Office",
+    "url": "https://www.travel.dod.mil/",
+    "displayDomain": "www.travel.dod.mil",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "travel policy",
+      "per diem",
+      "mileage",
+      "government travel card",
+      "gtcc",
+      "jtr"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "military-onesource",
+    "name": "Military OneSource",
+    "fullName": "Military OneSource",
+    "category": "Family & Community",
+    "description": "Confidential support and official information for service members, families, moving, finances, relationships, and military life.",
+    "tasks": [
+      "Find confidential support",
+      "Prepare for a PCS",
+      "Find family and military-life resources"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
+    "url": "https://www.militaryonesource.mil/",
+    "displayDomain": "www.militaryonesource.mil",
+    "access": [
+      "Public",
+      "Account optional for some services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
+    "keywords": [
+      "family",
+      "counseling",
+      "pcs",
+      "moving",
+      "financial counseling",
+      "child care",
+      "military life"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "army-tap",
+    "name": "Army TAP",
+    "fullName": "Army Transition Assistance Program",
+    "category": "Transition & Retirement",
+    "description": "Prepare for transition from active service through counseling, workshops, career resources, and required transition activities.",
+    "tasks": [
+      "Begin transition planning",
+      "Find transition classes",
+      "Prepare for civilian employment"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://www.armytap.army.mil/",
+    "displayDomain": "www.armytap.army.mil",
+    "access": [
+      "Public information",
+      "CAC for some services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "transition",
+      "sfl-tap",
+      "retirement",
+      "separation",
+      "civilian career",
+      "capstone"
+    ],
+    "legacyNames": [
+      "SFL-TAP"
+    ],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "id-card-office",
+    "name": "ID Card Office Online",
+    "fullName": "RAPIDS ID Card Office Online",
+    "category": "Personnel & Career",
+    "description": "Locate ID card offices and manage supported Common Access Card and dependent ID card services.",
+    "tasks": [
+      "Find a RAPIDS office",
+      "Schedule an ID card appointment",
+      "Manage supported family ID card services"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Manpower Data Center",
+    "url": "https://idco.dmdc.osd.mil/idco/",
+    "displayDomain": "idco.dmdc.osd.mil",
+    "access": [
+      "Public search",
+      "Authentication for some services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "cac",
+      "id card",
+      "rapids",
+      "appointment",
+      "dependent id",
+      "dmdc"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "enterprise-efmp",
+    "name": "Enterprise EFMP",
+    "fullName": "Enterprise Exceptional Family Member Program",
+    "category": "Family & Community",
+    "description": "Access supported EFMP enrollment, assignment coordination, family support, and case information.",
+    "tasks": [
+      "Start or update EFMP enrollment",
+      "Review EFMP family support information",
+      "Access assignment-coordination services"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "family-member"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://efmp.army.mil/EnterpriseEfmp/",
+    "displayDomain": "efmp.army.mil",
+    "access": [
+      "Public information",
+      "Authentication for case services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "exceptional family member",
+      "special needs",
+      "enrollment",
+      "assignment coordination",
+      "family support"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "army-family-web-portal",
+    "name": "Army Family Web Portal",
+    "fullName": "Army Family Web Portal",
+    "category": "Family & Community",
+    "description": "Access Army family-program learning, volunteer tools, and supported community resources.",
+    "tasks": [
+      "Find Army family-program training",
+      "Access volunteer-management tools",
+      "Locate family-program resources"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://www.armyfamilywebportal.com/",
+    "displayDomain": "www.armyfamilywebportal.com",
+    "access": [
+      "Public information",
+      "Account may be required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "family programs",
+      "acs",
+      "volunteer",
+      "vmis",
+      "family training",
+      "community"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "army-emergency-relief",
+    "name": "Army Emergency Relief",
+    "fullName": "Army Emergency Relief",
+    "category": "Family & Community",
+    "description": "Emergency financial assistance and related support for eligible Soldiers, retirees, and families.",
+    "tasks": [
+      "Request emergency financial assistance",
+      "Learn about AER assistance",
+      "Find an AER office"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "army-affiliated-nonprofit",
+    "officialOwner": "Army Emergency Relief",
+    "url": "https://www.armyemergencyrelief.org/",
+    "displayDomain": "www.armyemergencyrelief.org",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "emergency assistance",
+      "loan",
+      "grant",
+      "financial hardship",
+      "aer"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "usajobs",
+    "name": "USAJOBS",
+    "fullName": "USAJOBS Federal Employment Portal",
+    "category": "Civilian Resources",
+    "description": "Search and apply for federal civilian employment opportunities.",
+    "tasks": [
+      "Search for federal jobs",
+      "Create a federal resume profile",
+      "Apply for Army civilian positions"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-federal",
+    "officialOwner": "U.S. Office of Personnel Management",
+    "url": "https://www.usajobs.gov/",
+    "displayDomain": "www.usajobs.gov",
+    "access": [
+      "Public",
+      "Account required to apply"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": true,
+    "keywords": [
+      "jobs",
+      "employment",
+      "civilian",
+      "federal resume",
+      "career",
+      "hiring"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "army-civilian-careers",
+    "name": "Army Civilian Careers",
+    "fullName": "Army Civilian Careers",
+    "category": "Civilian Resources",
+    "description": "Explore Army civilian career fields, hiring paths, and current opportunities.",
+    "tasks": [
+      "Explore Army civilian career fields",
+      "Find Army civilian vacancies",
+      "Learn about civilian hiring paths"
+    ],
+    "audiences": [
+      "army-civilian",
+      "contractor",
+      "family-member",
+      "retiree-veteran",
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://armycivilianservice.usajobs.gov/",
+    "displayDomain": "armycivilianservice.usajobs.gov",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "army civilian",
+      "career",
+      "jobs",
+      "career program",
+      "dac",
+      "civilian service"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "mybiz-plus",
+    "name": "MyBiz+",
+    "fullName": "Defense Civilian Personnel Data System MyBiz+",
+    "category": "Civilian Resources",
+    "description": "Access supported civilian personnel information and self-service functions.",
+    "tasks": [
+      "Review civilian personnel information",
+      "Access civilian self-service records",
+      "Manage supported MyBiz functions"
+    ],
+    "audiences": [
+      "army-civilian"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
+    "url": "https://compo.dcpds.cpms.osd.mil/",
+    "displayDomain": "compo.dcpds.cpms.osd.mil",
+    "access": [
+      "CAC required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "mybiz",
+      "civilian personnel",
+      "dcpds",
+      "sf-50",
+      "performance",
+      "employment records"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "dod-safe",
+    "name": "DoD SAFE",
+    "fullName": "DoD Secure Access File Exchange",
+    "category": "IT & Communications",
+    "description": "Securely exchange approved unclassified files that are too large for email, subject to local policy.",
+    "tasks": [
+      "Send a large approved file",
+      "Receive a secure file drop",
+      "Exchange unclassified files"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Defense Information Systems Agency",
+    "url": "https://safe.apps.mil/",
+    "displayDomain": "safe.apps.mil",
+    "access": [
+      "CAC required for most use"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "file transfer",
+      "large file",
+      "secure exchange",
+      "safe",
+      "disa"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "milsuite",
+    "name": "milSuite",
+    "fullName": "DoD milSuite Collaboration Platform",
+    "category": "IT & Communications",
+    "description": "Authorized DoD collaboration communities, professional forums, and knowledge-sharing spaces.",
+    "tasks": [
+      "Find an Army professional community",
+      "Access milBook or milWiki content",
+      "Collaborate with authorized DoD users"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
+    "url": "https://www.milsuite.mil/",
+    "displayDomain": "www.milsuite.mil",
+    "access": [
+      "CAC required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "milbook",
+      "milwiki",
+      "community",
+      "forum",
+      "collaboration",
+      "s1net"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "aesmp",
+    "name": "Army IT Service Portal",
+    "fullName": "Army Enterprise Service Management Platform",
+    "category": "IT & Communications",
+    "description": "Submit and track supported Army enterprise IT service requests and incidents.",
+    "tasks": [
+      "Request Army IT support",
+      "Report an enterprise service problem",
+      "Track an IT service ticket"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve",
+      "army-civilian",
+      "contractor"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "Department of the Army",
+    "url": "https://www.aesmp.army.mil/csm",
+    "displayDomain": "www.aesmp.army.mil",
+    "access": [
+      "CAC required"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "help desk",
+      "it support",
+      "service desk",
+      "aesd",
+      "ticket",
+      "password",
+      "computer support"
+    ],
+    "legacyNames": [
+      "AESD"
+    ],
+    "automatedLinkCheck": false
+  },
+  {
+    "id": "va",
+    "name": "VA.gov",
+    "fullName": "U.S. Department of Veterans Affairs",
+    "category": "Transition & Retirement",
+    "description": "Access veterans benefits, health care, claims, education, records, and transition information.",
+    "tasks": [
+      "Apply for VA benefits",
+      "Manage a VA claim",
+      "Access veteran health or education services"
+    ],
+    "audiences": [
+      "retiree-veteran",
+      "family-member",
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-federal",
+    "officialOwner": "U.S. Department of Veterans Affairs",
+    "url": "https://www.va.gov/",
+    "displayDomain": "www.va.gov",
+    "access": [
+      "Public",
+      "Login required for account services"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "veteran",
+      "disability",
+      "claim",
+      "gi bill",
+      "health care",
+      "benefits",
+      "va"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "skillbridge",
+    "name": "DoD SkillBridge",
+    "fullName": "Department of Defense SkillBridge",
+    "category": "Transition & Retirement",
+    "description": "Research approved industry training and internship opportunities for eligible transitioning service members.",
+    "tasks": [
+      "Find a SkillBridge opportunity",
+      "Review SkillBridge eligibility information",
+      "Prepare an industry-training request"
+    ],
+    "audiences": [
+      "active-army",
+      "army-national-guard",
+      "army-reserve"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "Department of Defense",
+    "url": "https://skillbridge.osd.mil/",
+    "displayDomain": "skillbridge.osd.mil",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "skillbridge",
+      "internship",
+      "transition",
+      "industry",
+      "employment",
+      "separation"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "army-reserve",
+    "name": "Army Reserve",
+    "fullName": "U.S. Army Reserve",
+    "category": "Personnel & Career",
+    "description": "Official Army Reserve news, commands, resources, and service information.",
+    "tasks": [
+      "Find Army Reserve information",
+      "Locate a Reserve command or unit",
+      "Access Reserve-specific resources"
+    ],
+    "audiences": [
+      "army-reserve",
+      "active-army",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-army",
+    "officialOwner": "U.S. Army Reserve",
+    "url": "https://www.usar.army.mil/",
+    "displayDomain": "www.usar.army.mil",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "usar",
+      "reserve",
+      "troop program unit",
+      "army reserve",
+      "unit"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
+  },
+  {
+    "id": "national-guard",
+    "name": "National Guard",
+    "fullName": "National Guard",
+    "category": "Personnel & Career",
+    "description": "Official National Guard information, state and territory connections, news, and resources.",
+    "tasks": [
+      "Find National Guard information",
+      "Connect with a state National Guard",
+      "Access Guard news and resources"
+    ],
+    "audiences": [
+      "army-national-guard",
+      "family-member",
+      "retiree-veteran"
+    ],
+    "sourceType": "official-dod",
+    "officialOwner": "National Guard Bureau",
+    "url": "https://www.nationalguard.mil/",
+    "displayDomain": "www.nationalguard.mil",
+    "access": [
+      "Public"
+    ],
+    "network": "Commercial internet",
+    "status": "active",
+    "lastVerified": "2026-07-29",
+    "featured": false,
+    "keywords": [
+      "national guard",
+      "arng",
+      "guard",
+      "state",
+      "ngb"
+    ],
+    "legacyNames": [],
+    "automatedLinkCheck": true
   }
 ]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "v020-release",
+    "title": "SKN Public Alpha v0.2.0",
+    "summary": "Added audience filters, browser-based favorites, source classifications, structured reporting, expanded resource metadata, and automated repository checks.",
+    "date": "2026-07-29",
+    "type": "site-update",
+    "relatedResources": []
+  },
+  {
+    "id": "atis-learning",
+    "title": "Use ATIS Learning for current Army distributed learning",
+    "summary": "SKN recognizes ALMS as a legacy search term and directs users to the current ATIS Learning resource.",
+    "date": "2026-07-29",
+    "type": "system-change",
+    "relatedResources": [
+      "atis-learning"
+    ]
+  },
+  {
+    "id": "army365-email",
+    "title": "Army 365 Outlook added as a featured resource",
+    "summary": "Army 365 webmail is now included in the Frequently Used section for authorized Army workforce users.",
+    "date": "2026-07-29",
+    "type": "new-resource",
+    "relatedResources": [
+      "army-365-email"
+    ]
+  },
+  {
+    "id": "reporting-launch",
+    "title": "Structured correction and broken-link reporting launched",
+    "summary": "Visitors can now open a guided GitHub report from each resource card or suggest a new resource from the website.",
+    "date": "2026-07-29",
+    "type": "site-update",
+    "relatedResources": []
+  }
+]

@@ -1,104 +1,25 @@
-const state = {
-  resources: [],
-  query: "",
-  category: "all"
-};
-
-const grid = document.querySelector("#resource-grid");
-const emptyState = document.querySelector("#empty-state");
-const searchInput = document.querySelector("#resource-search");
-const summary = document.querySelector("#result-summary");
-const count = document.querySelector("#resource-count");
-
-function normalize(value = "") {
-  return value.toLowerCase().trim();
-}
-
-function matches(resource) {
-  const categoryMatch =
-    state.category === "all" || resource.category === state.category;
-
-  const haystack = normalize([
-    resource.name,
-    resource.description,
-    resource.category,
-    resource.keywords.join(" ")
-  ].join(" "));
-
-  return categoryMatch && haystack.includes(normalize(state.query));
-}
-
-function render() {
-  const visible = state.resources.filter(matches);
-  grid.innerHTML = "";
-
-  for (const resource of visible) {
-    const article = document.createElement("article");
-    article.className = "resource-card";
-    article.innerHTML = `
-      <div class="card-top">
-        <span class="category">${resource.category}</span>
-        <span class="access-badge">${resource.access}</span>
-      </div>
-      <h3>${resource.name}</h3>
-      <p>${resource.description}</p>
-      <div class="card-footer">
-        <span class="verified">Last verified: ${resource.lastVerified}</span>
-        <a class="resource-link" href="${resource.url}"
-          target="_blank" rel="noopener noreferrer">
-          Open official resource <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    `;
-    grid.appendChild(article);
-  }
-
-  summary.textContent = `${visible.length} of ${state.resources.length} resources shown`;
-  emptyState.hidden = visible.length !== 0;
-}
-
-async function loadResources() {
-  try {
-    const response = await fetch("data/resources.json");
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.resources = await response.json();
-    count.textContent = state.resources.length;
-    render();
-  } catch (error) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <h3>Resources could not be loaded</h3>
-        <p>Check that <code>data/resources.json</code> exists and contains valid JSON.</p>
-      </div>
-    `;
-    console.error(error);
-  }
-}
-
-searchInput.addEventListener("input", (event) => {
-  state.query = event.target.value;
-  render();
-});
-
-document.querySelectorAll(".filter").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll(".filter").forEach((item) =>
-      item.classList.remove("active")
-    );
-    button.classList.add("active");
-    state.category = button.dataset.category;
-    render();
-  });
-});
-
-document.querySelectorAll("[data-query]").forEach((button) => {
-  button.addEventListener("click", () => {
-    state.query = button.dataset.query;
-    searchInput.value = state.query;
-    searchInput.focus();
-    render();
-    document.querySelector("#resources").scrollIntoView();
-  });
-});
-
-loadResources();
+const REPO = "https://github.com/Casden0129/Soldier-Knowledge-Network";
+const state = { resources: [], updates: [], site: {}, query: "", category: "all", audience: "everyone", sort: "relevance", favorites: new Set(JSON.parse(localStorage.getItem("skn-favorites") || "[]")) };
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => [...document.querySelectorAll(selector)];
+const normalize = (value = "") => value.toLowerCase().normalize("NFKD").replace(/[–—]/g,"-").replace(/[^a-z0-9+& -]/g," ").replace(/\s+/g," ").trim();
+const sourceLabels = {"official-army":"Official Army","official-dod":"Official DoD","official-federal":"Official Federal","army-affiliated-nonprofit":"Army-affiliated nonprofit","independent":"Independent","commercial":"Commercial"};
+const typeLabels = {"site-update":"Site update","system-change":"System change","new-resource":"New resource","link-change":"Link change","publication-update":"Publication update","resource-retired":"Resource retired"};
+function formatDate(value){return new Intl.DateTimeFormat("en-US",{year:"numeric",month:"short",day:"numeric"}).format(new Date(value+"T12:00:00"));}
+function audienceMatches(r){return state.audience === "everyone" || r.audiences.includes(state.audience);}
+function scoreResource(r,q){ if(!q) return r.featured ? 10 : 1; const n=normalize(q); const name=normalize(r.name); const full=normalize(r.fullName); let score=0; if(name===n)score+=120; if(full===n)score+=110; if(name.startsWith(n))score+=90; if(full.startsWith(n))score+=80; if(name.includes(n))score+=65; if(full.includes(n))score+=55; for(const legacy of r.legacyNames||[]){const l=normalize(legacy);if(l===n)score+=100;else if(l.includes(n)||n.includes(l))score+=55;} for(const keyword of r.keywords||[]){const k=normalize(keyword);if(k===n)score+=75;else if(k.includes(n)||n.includes(k))score+=38;} for(const task of r.tasks||[]){const t=normalize(task);if(t.includes(n)||n.split(" ").every(word=>t.includes(word)))score+=45;} const category=normalize(r.category);if(category.includes(n))score+=22; const desc=normalize(r.description);if(desc.includes(n))score+=18; const words=n.split(" "); const haystack=normalize([r.name,r.fullName,r.description,r.category,...r.tasks,...r.keywords,...(r.legacyNames||[])].join(" ")); score += words.filter(w=>w.length>1 && haystack.includes(w)).length*6; if(r.sourceType.startsWith("official"))score+=3; return score; }
+function filteredResources(){ const q=state.query.trim(); return state.resources.map(r=>({...r,_score:scoreResource(r,q)})).filter(r=>audienceMatches(r)&&(state.category==="all"||r.category===state.category)&&(!q||r._score>0)).sort((a,b)=>{if(state.sort==="name")return a.name.localeCompare(b.name);if(state.sort==="verified")return b.lastVerified.localeCompare(a.lastVerified)||a.name.localeCompare(b.name);return b._score-a._score||Number(b.featured)-Number(a.featured)||a.name.localeCompare(b.name);}); }
+function issueUrl(r){const title=encodeURIComponent(`[Broken link] ${r.name}`);return `${REPO}/issues/new?template=broken-link.yml&title=${title}`;}
+function card(r,compact=false){const saved=state.favorites.has(r.id);const tasks=(r.tasks||[]).slice(0,compact?1:2).map(t=>`<li>${t}</li>`).join("");const access=(r.access||[])[0]||"See official source";return `<article class="resource-card" data-id="${r.id}"><div class="card-top"><div class="badge-group"><span class="source-badge source-${r.sourceType}">${sourceLabels[r.sourceType]||r.sourceType}</span><span class="access-badge">${access}</span></div><button class="favorite-button" type="button" data-favorite="${r.id}" aria-label="${saved?'Remove':'Add'} ${r.name} ${saved?'from':'to'} favorites" aria-pressed="${saved}">${saved?'★':'☆'}</button></div><h3>${r.name}</h3><p class="full-name">${r.fullName}</p><p>${r.description}</p><ul class="task-list">${tasks}</ul><div class="meta-list"><span><strong>Owner:</strong> ${r.officialOwner}</span><span><strong>Destination:</strong> ${r.displayDomain}</span><span><strong>Access:</strong> ${r.network}</span><span><strong>Reviewed:</strong> ${formatDate(r.lastVerified)}</span></div><div class="card-actions"><a class="resource-link" href="${r.url}" target="_blank" rel="noopener noreferrer">Open resource <span aria-hidden="true">↗</span></a><a class="report-link" href="${issueUrl(r)}" target="_blank" rel="noopener noreferrer">Report a problem</a></div></article>`;}
+function bindFavorites(){ $$('[data-favorite]').forEach(btn=>btn.addEventListener('click',()=>{const id=btn.dataset.favorite;if(state.favorites.has(id))state.favorites.delete(id);else state.favorites.add(id);localStorage.setItem('skn-favorites',JSON.stringify([...state.favorites]));renderAll();})); }
+function renderCategories(){const cats=[...new Set(state.resources.map(r=>r.category))].sort();const host=$('#category-filters');host.innerHTML=[`<button class="filter active" type="button" data-category="all">All</button>`,...cats.map(c=>`<button class="filter" type="button" data-category="${c}">${c}</button>`)].join('');host.querySelectorAll('[data-category]').forEach(btn=>btn.addEventListener('click',()=>{host.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');state.category=btn.dataset.category;renderDirectory();}));}
+function renderDirectory(){const visible=filteredResources();$('#resource-grid').innerHTML=visible.map(r=>card(r)).join('');$('#result-summary').textContent=`${visible.length} of ${state.resources.length} resources shown`;$('#empty-state').hidden=visible.length!==0;bindFavorites();}
+function renderFeatured(){const featured=state.resources.filter(r=>r.featured&&audienceMatches(r)).slice(0,8);$('#featured-grid').innerHTML=featured.map(r=>card(r,true)).join('');bindFavorites();}
+function renderFavorites(){const favs=state.resources.filter(r=>state.favorites.has(r.id)&&audienceMatches(r));const section=$('#favorites');section.hidden=favs.length===0;$('#favorites-grid').innerHTML=favs.map(r=>card(r,true)).join('');bindFavorites();}
+function renderUpdates(){const host=$('#updates-grid');host.innerHTML=state.updates.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(u=>`<article class="update-card"><span class="update-type">${typeLabels[u.type]||u.type}</span><h3>${u.title}</h3><p>${u.summary}</p><time datetime="${u.date}">${formatDate(u.date)}</time></article>`).join('');}
+function renderStats(){const categories=new Set(state.resources.map(r=>r.category));$('#resource-count').textContent=state.resources.length;$('#category-count').textContent=categories.size;$('#site-version').textContent=state.site.version;$('#release-stage').textContent=state.site.releaseStage;$('#site-updated').textContent=formatDate(state.site.lastUpdated);}
+function renderAll(){renderFeatured();renderFavorites();renderDirectory();}
+function setAudience(value){state.audience=value;localStorage.setItem('skn-audience',value);$$('[data-audience]').forEach(b=>b.classList.toggle('active',b.dataset.audience===value));renderAll();}
+function clearFilters(){state.query='';state.category='all';state.audience='everyone';state.sort='relevance';$('#resource-search').value='';$('#sort-select').value='relevance';$$('[data-audience]').forEach(b=>b.classList.toggle('active',b.dataset.audience==='everyone'));$$('[data-category]').forEach(b=>b.classList.toggle('active',b.dataset.category==='all'));renderAll();}
+async function init(){try{const [resourcesRes,updatesRes,siteRes]=await Promise.all([fetch('data/resources.json'),fetch('data/updates.json'),fetch('data/site.json')]);if(!resourcesRes.ok||!updatesRes.ok||!siteRes.ok)throw new Error('A data file could not be loaded.');state.resources=await resourcesRes.json();state.updates=await updatesRes.json();state.site=await siteRes.json();renderCategories();renderUpdates();renderStats();const savedAudience=localStorage.getItem('skn-audience');if(savedAudience&&$$(`[data-audience="${savedAudience}"]`).length)setAudience(savedAudience);else renderAll();}catch(error){console.error(error);$('#resource-grid').innerHTML='<div class="empty-state"><h3>Directory data could not be loaded</h3><p>Check the JSON files in the data folder and the latest GitHub Actions results.</p></div>';}}
+$('#resource-search').addEventListener('input',e=>{state.query=e.target.value;renderDirectory();});$$('[data-query]').forEach(btn=>btn.addEventListener('click',()=>{state.query=btn.dataset.query;$('#resource-search').value=state.query;renderDirectory();$('#resources').scrollIntoView();}));$$('[data-audience]').forEach(btn=>btn.addEventListener('click',()=>setAudience(btn.dataset.audience)));$('#sort-select').addEventListener('change',e=>{state.sort=e.target.value;renderDirectory();});$('#clear-search').addEventListener('click',clearFilters);$('#clear-favorites').addEventListener('click',()=>{state.favorites.clear();localStorage.removeItem('skn-favorites');renderAll();});const menu=$('.menu-button');menu.addEventListener('click',()=>{const nav=$('#primary-nav');const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});init();
